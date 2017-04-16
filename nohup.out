@@ -1,0 +1,803 @@
+ * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+opening a connection to the CEC adapter...
+DEBUG:   [              49]	Broadcast (F): osd name set to 'Broadcast'
+DEBUG:   [              49]	InitHostCEC - vchiq_initialise succeeded
+DEBUG:   [              49]	InitHostCEC - vchi_initialise succeeded
+DEBUG:   [              49]	InitHostCEC - vchi_connect succeeded
+DEBUG:   [              50]	Open - vc_cec initialised
+DEBUG:   [              50]	logical address changed to Free use (e)
+NOTICE:  [              50]	connection opened
+DEBUG:   [              50]	processor thread started
+DEBUG:   [              50]	<< Broadcast (F) -> TV (0): POLL
+DEBUG:   [              50]	initiator 'Broadcast' is not supported by the CEC adapter. using 'Free use' instead
+TRAFFIC: [              50]	<< e0
+DEBUG:   [             110]	>> POLL sent
+DEBUG:   [             110]	TV (0): device status changed into 'present'
+DEBUG:   [             111]	<< requesting vendor ID of 'TV' (0)
+TRAFFIC: [             111]	<< e0:8c
+TRAFFIC: [             318]	>> 0e:00:8c:04
+DEBUG:   [             319]	marking opcode 'give device vendor id' as unsupported feature for device 'TV'
+DEBUG:   [             319]	expected response received (87: device vendor id)
+NOTICE:  [             319]	registering new CEC client - v3.0.1
+DEBUG:   [             319]	detecting logical address for type 'recording device'
+DEBUG:   [             319]	trying logical address 'Recorder 1'
+DEBUG:   [             319]	<< Recorder 1 (1) -> Recorder 1 (1): POLL
+TRAFFIC: [             319]	<< 11
+TRAFFIC: [             592]	<< 11
+DEBUG:   [             863]	>> POLL not sent
+DEBUG:   [             863]	using logical address 'Recorder 1'
+DEBUG:   [             863]	Recorder 1 (1): device status changed into 'handled by libCEC'
+DEBUG:   [             863]	Recorder 1 (1): power status changed from 'unknown' to 'on'
+DEBUG:   [             863]	Recorder 1 (1): vendor = Pulse Eight (001582)
+DEBUG:   [             863]	Recorder 1 (1): CEC version 1.4
+DEBUG:   [             863]	AllocateLogicalAddresses - device '0', type 'recording device', LA '1'
+DEBUG:   [             863]	logical address changed to Recorder 1 (1)
+DEBUG:   [             863]	Recorder 1 (1): osd name set to 'CECTester'
+DEBUG:   [             863]	Recorder 1 (1): menu language set to 'eng'
+DEBUG:   [             863]	GetPhysicalAddress - physical address = 1000
+DEBUG:   [             863]	AutodetectPhysicalAddress - autodetected physical address '1000'
+DEBUG:   [             863]	Recorder 1 (1): physical address changed from ffff to 1000
+DEBUG:   [             863]	<< Recorder 1 (1) -> broadcast (F): physical adddress 1000
+TRAFFIC: [             863]	<< 1f:84:10:00:01
+NOTICE:  [            1077]	CEC client registered: libCEC version = 3.0.1, client version = 3.0.1, firmware version = 1, logical address(es) = Recorder 1 (1) , physical address: 1.0.0.0,  compiled on Fri Jul  3 19:20:43 UTC 2015 by pbuilder@mgorven-pc.thefacebook.com on Linux 3.16.0-41-generic (armv7l), features: P8_USB, P8_detect, 'RPi'
+DEBUG:   [            1077]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [            1077]	<< 10:47:43:45:43:54:65:73:74:65:72
+DEBUG:   [            1411]	<< requesting power status of 'TV' (0)
+TRAFFIC: [            1411]	<< 10:8f
+TRAFFIC: [            1411]	>> 01:46
+DEBUG:   [            1411]	>> TV (0) -> Recorder 1 (1): give osd name (46)
+DEBUG:   [            1501]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [            1502]	<< 10:47:43:45:43:54:65:73:74:65:72
+TRAFFIC: [            1864]	>> 01:90:00
+DEBUG:   [            1864]	>> TV (0) -> Recorder 1 (1): report power status (90)
+DEBUG:   [            1864]	TV (0): power status changed from 'unknown' to 'on'
+DEBUG:   [            1864]	expected response received (90: report power status)
+DEBUG:   [            1865]	making Recorder 1 (1) the active source
+NOTICE:  [            1865]	>> source activated: Recorder 1 (1)
+DEBUG:   [            1865]	sending active source message for 'Recorder 1'
+DEBUG:   [            1865]	<< requesting vendor ID of 'TV' (0)
+DEBUG:   [            1865]	'give device vendor id' is marked as unsupported feature for device 'TV'
+NOTICE:  [            1865]	<< powering on 'TV' (0)
+TRAFFIC: [            1865]	<< 10:04
+NOTICE:  [            1955]	<< Recorder 1 (1) -> broadcast (F): active source (1000)
+TRAFFIC: [            1955]	<< 1f:82:10:00
+DEBUG:   [            2075]	<< Recorder 1 (1) -> TV (0): menu state 'activated'
+TRAFFIC: [            2075]	<< 10:8e:00
+DEBUG:   [            2165]	unregistering all CEC clients
+NOTICE:  [            2165]	unregistering client: libCEC version = 3.0.1, client version = 3.0.1, firmware version = 1, logical address(es) = Recorder 1 (1) , physical address: 1.0.0.0,  compiled on Fri Jul  3 19:20:43 UTC 2015 by pbuilder@mgorven-pc.thefacebook.com on Linux 3.16.0-41-generic (armv7l), features: P8_USB, P8_detect, 'RPi'
+DEBUG:   [            2165]	Recorder 1 (1): power status changed from 'on' to 'unknown'
+DEBUG:   [            2165]	Recorder 1 (1): vendor = Unknown (000000)
+DEBUG:   [            2165]	Recorder 1 (1): CEC version unknown
+DEBUG:   [            2165]	Recorder 1 (1): osd name set to 'Recorder 1'
+DEBUG:   [            2165]	marking Recorder 1 (1) as inactive source
+DEBUG:   [            2165]	Recorder 1 (1): device status changed into 'unknown'
+DEBUG:   [            2165]	unregistering all CEC clients
+TRAFFIC: [            2357]	>> 0f:80:20:00:10:00
+DEBUG:   [            2357]	>> TV (0) -> Broadcast (F): routing change (80)
+TRAFFIC: [            2495]	>> 0f:86:10:00
+DEBUG:   [            2495]	>> TV (0) -> Broadcast (F): set stream path (86)
+DEBUG:   [            3051]	UnregisterLogicalAddress - releasing previous logical address
+DEBUG:   [            3051]	logical address changed to Broadcast (f)
+opening a connection to the CEC adapter...
+DEBUG:   [              39]	Broadcast (F): osd name set to 'Broadcast'
+DEBUG:   [              40]	InitHostCEC - vchiq_initialise succeeded
+DEBUG:   [              40]	InitHostCEC - vchi_initialise succeeded
+DEBUG:   [              40]	InitHostCEC - vchi_connect succeeded
+DEBUG:   [              40]	Open - vc_cec initialised
+DEBUG:   [              40]	logical address changed to Free use (e)
+NOTICE:  [              40]	connection opened
+DEBUG:   [              40]	processor thread started
+DEBUG:   [              40]	<< Broadcast (F) -> TV (0): POLL
+DEBUG:   [              40]	initiator 'Broadcast' is not supported by the CEC adapter. using 'Free use' instead
+TRAFFIC: [              40]	<< e0
+DEBUG:   [             101]	>> POLL sent
+DEBUG:   [             101]	TV (0): device status changed into 'present'
+DEBUG:   [             101]	<< requesting vendor ID of 'TV' (0)
+TRAFFIC: [             101]	<< e0:8c
+TRAFFIC: [             276]	>> 0e:00:8c:04
+DEBUG:   [             276]	marking opcode 'give device vendor id' as unsupported feature for device 'TV'
+DEBUG:   [             276]	expected response received (87: device vendor id)
+NOTICE:  [             276]	registering new CEC client - v3.0.1
+DEBUG:   [             276]	detecting logical address for type 'recording device'
+DEBUG:   [             276]	trying logical address 'Recorder 1'
+DEBUG:   [             276]	<< Recorder 1 (1) -> Recorder 1 (1): POLL
+TRAFFIC: [             276]	<< 11
+TRAFFIC: [             550]	<< 11
+DEBUG:   [             825]	>> POLL not sent
+DEBUG:   [             825]	using logical address 'Recorder 1'
+DEBUG:   [             825]	Recorder 1 (1): device status changed into 'handled by libCEC'
+DEBUG:   [             825]	Recorder 1 (1): power status changed from 'unknown' to 'on'
+DEBUG:   [             825]	Recorder 1 (1): vendor = Pulse Eight (001582)
+DEBUG:   [             825]	Recorder 1 (1): CEC version 1.4
+DEBUG:   [             825]	AllocateLogicalAddresses - device '0', type 'recording device', LA '1'
+DEBUG:   [             825]	logical address changed to Recorder 1 (1)
+DEBUG:   [             825]	Recorder 1 (1): osd name set to 'CECTester'
+DEBUG:   [             825]	Recorder 1 (1): menu language set to 'eng'
+DEBUG:   [             825]	GetPhysicalAddress - physical address = 1000
+DEBUG:   [             825]	AutodetectPhysicalAddress - autodetected physical address '1000'
+DEBUG:   [             825]	Recorder 1 (1): physical address changed from ffff to 1000
+DEBUG:   [             825]	<< Recorder 1 (1) -> broadcast (F): physical adddress 1000
+TRAFFIC: [             825]	<< 1f:84:10:00:01
+NOTICE:  [             976]	CEC client registered: libCEC version = 3.0.1, client version = 3.0.1, firmware version = 1, logical address(es) = Recorder 1 (1) , physical address: 1.0.0.0,  compiled on Fri Jul  3 19:20:43 UTC 2015 by pbuilder@mgorven-pc.thefacebook.com on Linux 3.16.0-41-generic (armv7l), features: P8_USB, P8_detect, 'RPi'
+DEBUG:   [             976]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [             976]	<< 10:47:43:45:43:54:65:73:74:65:72
+DEBUG:   [            1276]	<< requesting power status of 'TV' (0)
+TRAFFIC: [            1276]	<< 10:8f
+TRAFFIC: [            1398]	>> 01:46
+DEBUG:   [            1398]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+DEBUG:   [            1398]	>> TV (0) -> Recorder 1 (1): give osd name (46)
+TRAFFIC: [            1398]	<< 10:47:43:45:43:54:65:73:74:65:72
+TRAFFIC: [            1760]	>> 01:90:00
+DEBUG:   [            1760]	TV (0): power status changed from 'unknown' to 'on'
+DEBUG:   [            1760]	expected response received (90: report power status)
+DEBUG:   [            1760]	>> TV (0) -> Recorder 1 (1): report power status (90)
+TRAFFIC: [            1760]	<< 4f:82:20:00
+WARNING: [            1880]	unhandled response received: opcode=82 initiator=1 destination=f response=0
+TRAFFIC: [            2150]	>> 0f:80:10:00:20:00
+DEBUG:   [            2150]	>> TV (0) -> Broadcast (F): routing change (80)
+DEBUG:   [            4761]	command 'active source' timeout
+DEBUG:   [            5261]	unregistering all CEC clients
+NOTICE:  [            5261]	unregistering client: libCEC version = 3.0.1, client version = 3.0.1, firmware version = 1, logical address(es) = Recorder 1 (1) , physical address: 1.0.0.0,  compiled on Fri Jul  3 19:20:43 UTC 2015 by pbuilder@mgorven-pc.thefacebook.com on Linux 3.16.0-41-generic (armv7l), features: P8_USB, P8_detect, 'RPi'
+TRAFFIC: [            5261]	>> 0f:86:20:00
+DEBUG:   [            5261]	Recorder 1 (1): power status changed from 'on' to 'unknown'
+DEBUG:   [            5261]	Recorder 1 (1): vendor = Unknown (000000)
+DEBUG:   [            5261]	Recorder 1 (1): CEC version unknown
+DEBUG:   [            5261]	Recorder 1 (1): osd name set to 'Recorder 1'
+DEBUG:   [            5261]	Recorder 1 (1): device status changed into 'unknown'
+DEBUG:   [            5261]	unregistering all CEC clients
+TRAFFIC: [            5261]	>> 01:46
+TRAFFIC: [            5261]	>> 01:8d:00
+TRAFFIC: [            5261]	>> 4f:82:20:00
+DEBUG:   [            5261]	Playback 1 (4): physical address changed from ffff to 2000
+DEBUG:   [            5261]	Playback 1 (4): power status changed from 'unknown' to 'on'
+DEBUG:   [            5261]	making Playback 1 (4) the active source
+DEBUG:   [            5261]	device Playback 1 (4) status changed to present after command active source
+DEBUG:   [            5266]	>> TV (0) -> Broadcast (F): set stream path (86)
+DEBUG:   [            5266]	>> TV (0) -> Recorder 1 (1): give osd name (46)
+DEBUG:   [            5266]	>> TV (0) -> Recorder 1 (1): menu request (8D)
+DEBUG:   [            5266]	>> Playback 1 (4) -> Broadcast (F): active source (82)
+TRAFFIC: [            5367]	>> 01:46
+DEBUG:   [            5367]	>> TV (0) -> Recorder 1 (1): give osd name (46)
+DEBUG:   [            6041]	UnregisterLogicalAddress - releasing previous logical address
+DEBUG:   [            6041]	logical address changed to Broadcast (f)
+opening a connection to the CEC adapter...
+DEBUG:   [              54]	Broadcast (F): osd name set to 'Broadcast'
+DEBUG:   [              54]	InitHostCEC - vchiq_initialise succeeded
+DEBUG:   [              54]	InitHostCEC - vchi_initialise succeeded
+DEBUG:   [              54]	InitHostCEC - vchi_connect succeeded
+DEBUG:   [              54]	Open - vc_cec initialised
+DEBUG:   [              55]	logical address changed to Free use (e)
+NOTICE:  [              55]	connection opened
+DEBUG:   [              55]	processor thread started
+DEBUG:   [              55]	<< Broadcast (F) -> TV (0): POLL
+DEBUG:   [              55]	initiator 'Broadcast' is not supported by the CEC adapter. using 'Free use' instead
+TRAFFIC: [              55]	<< e0
+DEBUG:   [             116]	>> POLL sent
+DEBUG:   [             116]	TV (0): device status changed into 'present'
+DEBUG:   [             116]	<< requesting vendor ID of 'TV' (0)
+TRAFFIC: [             116]	<< e0:8c
+TRAFFIC: [             346]	>> 0e:00:8c:04
+DEBUG:   [             346]	marking opcode 'give device vendor id' as unsupported feature for device 'TV'
+DEBUG:   [             346]	expected response received (87: device vendor id)
+NOTICE:  [             346]	registering new CEC client - v3.0.1
+DEBUG:   [             346]	detecting logical address for type 'recording device'
+DEBUG:   [             346]	trying logical address 'Recorder 1'
+DEBUG:   [             347]	<< Recorder 1 (1) -> Recorder 1 (1): POLL
+TRAFFIC: [             347]	<< 11
+TRAFFIC: [             617]	<< 11
+DEBUG:   [             863]	>> POLL not sent
+DEBUG:   [             863]	using logical address 'Recorder 1'
+DEBUG:   [             863]	Recorder 1 (1): device status changed into 'handled by libCEC'
+DEBUG:   [             863]	Recorder 1 (1): power status changed from 'unknown' to 'on'
+DEBUG:   [             863]	Recorder 1 (1): vendor = Pulse Eight (001582)
+DEBUG:   [             863]	Recorder 1 (1): CEC version 1.4
+DEBUG:   [             863]	AllocateLogicalAddresses - device '0', type 'recording device', LA '1'
+DEBUG:   [             863]	Recorder 1 (1): osd name set to 'CECTester'
+DEBUG:   [             863]	Recorder 1 (1): menu language set to 'eng'
+DEBUG:   [             863]	logical address changed to Recorder 1 (1)
+DEBUG:   [             864]	GetPhysicalAddress - physical address = 1000
+DEBUG:   [             864]	AutodetectPhysicalAddress - autodetected physical address '1000'
+DEBUG:   [             864]	Recorder 1 (1): physical address changed from ffff to 1000
+DEBUG:   [             864]	<< Recorder 1 (1) -> broadcast (F): physical adddress 1000
+TRAFFIC: [             864]	<< 1f:84:10:00:01
+NOTICE:  [            1015]	CEC client registered: libCEC version = 3.0.1, client version = 3.0.1, firmware version = 1, logical address(es) = Recorder 1 (1) , physical address: 1.0.0.0,  compiled on Fri Jul  3 19:20:43 UTC 2015 by pbuilder@mgorven-pc.thefacebook.com on Linux 3.16.0-41-generic (armv7l), features: P8_USB, P8_detect, 'RPi'
+DEBUG:   [            1015]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [            1015]	<< 10:47:43:45:43:54:65:73:74:65:72
+DEBUG:   [            1316]	<< requesting power status of 'TV' (0)
+TRAFFIC: [            1316]	<< 10:8f
+TRAFFIC: [            1468]	>> 01:46
+DEBUG:   [            1468]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+DEBUG:   [            1468]	>> TV (0) -> Recorder 1 (1): give osd name (46)
+TRAFFIC: [            1468]	<< 10:47:43:45:43:54:65:73:74:65:72
+TRAFFIC: [            1831]	>> 01:90:00
+DEBUG:   [            1831]	TV (0): power status changed from 'unknown' to 'on'
+DEBUG:   [            1831]	expected response received (90: report power status)
+DEBUG:   [            1831]	>> TV (0) -> Recorder 1 (1): report power status (90)
+DEBUG:   [            1831]	making Recorder 1 (1) the active source
+NOTICE:  [            1831]	>> source activated: Recorder 1 (1)
+DEBUG:   [            1831]	sending active source message for 'Recorder 1'
+DEBUG:   [            1831]	<< requesting vendor ID of 'TV' (0)
+DEBUG:   [            1832]	'give device vendor id' is marked as unsupported feature for device 'TV'
+NOTICE:  [            1832]	<< powering on 'TV' (0)
+TRAFFIC: [            1832]	<< 10:04
+NOTICE:  [            1923]	<< Recorder 1 (1) -> broadcast (F): active source (1000)
+TRAFFIC: [            1923]	<< 1f:82:10:00
+DEBUG:   [            2044]	<< Recorder 1 (1) -> TV (0): menu state 'activated'
+TRAFFIC: [            2044]	<< 10:8e:00
+DEBUG:   [            2134]	unregistering all CEC clients
+NOTICE:  [            2134]	unregistering client: libCEC version = 3.0.1, client version = 3.0.1, firmware version = 1, logical address(es) = Recorder 1 (1) , physical address: 1.0.0.0,  compiled on Fri Jul  3 19:20:43 UTC 2015 by pbuilder@mgorven-pc.thefacebook.com on Linux 3.16.0-41-generic (armv7l), features: P8_USB, P8_detect, 'RPi'
+DEBUG:   [            2134]	Recorder 1 (1): power status changed from 'on' to 'unknown'
+DEBUG:   [            2134]	Recorder 1 (1): vendor = Unknown (000000)
+DEBUG:   [            2134]	Recorder 1 (1): CEC version unknown
+DEBUG:   [            2134]	Recorder 1 (1): osd name set to 'Recorder 1'
+DEBUG:   [            2134]	marking Recorder 1 (1) as inactive source
+DEBUG:   [            2134]	Recorder 1 (1): device status changed into 'unknown'
+DEBUG:   [            2134]	unregistering all CEC clients
+TRAFFIC: [            2329]	>> 0f:80:20:00:10:00
+DEBUG:   [            2329]	>> TV (0) -> Broadcast (F): routing change (80)
+TRAFFIC: [            2466]	>> 0f:86:10:00
+DEBUG:   [            2466]	>> TV (0) -> Broadcast (F): set stream path (86)
+DEBUG:   [            3056]	UnregisterLogicalAddress - releasing previous logical address
+DEBUG:   [            3058]	logical address changed to Broadcast (f)
+opening a connection to the CEC adapter...
+DEBUG:   [              52]	Broadcast (F): osd name set to 'Broadcast'
+DEBUG:   [              52]	InitHostCEC - vchiq_initialise succeeded
+DEBUG:   [              52]	InitHostCEC - vchi_initialise succeeded
+DEBUG:   [              52]	InitHostCEC - vchi_connect succeeded
+DEBUG:   [              54]	Open - vc_cec initialised
+DEBUG:   [              54]	logical address changed to Free use (e)
+NOTICE:  [              54]	connection opened
+DEBUG:   [              54]	processor thread started
+DEBUG:   [              54]	<< Broadcast (F) -> TV (0): POLL
+DEBUG:   [              54]	initiator 'Broadcast' is not supported by the CEC adapter. using 'Free use' instead
+TRAFFIC: [              54]	<< e0
+DEBUG:   [             115]	>> POLL sent
+DEBUG:   [             115]	TV (0): device status changed into 'present'
+DEBUG:   [             115]	<< requesting vendor ID of 'TV' (0)
+TRAFFIC: [             116]	<< e0:8c
+TRAFFIC: [             281]	>> 0e:00:8c:04
+DEBUG:   [             282]	marking opcode 'give device vendor id' as unsupported feature for device 'TV'
+DEBUG:   [             282]	expected response received (87: device vendor id)
+NOTICE:  [             282]	registering new CEC client - v3.0.1
+DEBUG:   [             282]	detecting logical address for type 'recording device'
+DEBUG:   [             282]	trying logical address 'Recorder 1'
+DEBUG:   [             282]	<< Recorder 1 (1) -> Recorder 1 (1): POLL
+TRAFFIC: [             282]	<< 11
+TRAFFIC: [             556]	<< 11
+DEBUG:   [             800]	>> POLL not sent
+DEBUG:   [             800]	using logical address 'Recorder 1'
+DEBUG:   [             800]	Recorder 1 (1): device status changed into 'handled by libCEC'
+DEBUG:   [             800]	Recorder 1 (1): power status changed from 'unknown' to 'on'
+DEBUG:   [             800]	Recorder 1 (1): vendor = Pulse Eight (001582)
+DEBUG:   [             800]	Recorder 1 (1): CEC version 1.4
+DEBUG:   [             800]	AllocateLogicalAddresses - device '0', type 'recording device', LA '1'
+DEBUG:   [             800]	logical address changed to Recorder 1 (1)
+DEBUG:   [             800]	Recorder 1 (1): osd name set to 'CECTester'
+DEBUG:   [             801]	Recorder 1 (1): menu language set to 'eng'
+DEBUG:   [             801]	GetPhysicalAddress - physical address = 1000
+DEBUG:   [             801]	AutodetectPhysicalAddress - autodetected physical address '1000'
+DEBUG:   [             801]	Recorder 1 (1): physical address changed from ffff to 1000
+DEBUG:   [             801]	<< Recorder 1 (1) -> broadcast (F): physical adddress 1000
+TRAFFIC: [             801]	<< 1f:84:10:00:01
+NOTICE:  [             952]	CEC client registered: libCEC version = 3.0.1, client version = 3.0.1, firmware version = 1, logical address(es) = Recorder 1 (1) , physical address: 1.0.0.0,  compiled on Fri Jul  3 19:20:43 UTC 2015 by pbuilder@mgorven-pc.thefacebook.com on Linux 3.16.0-41-generic (armv7l), features: P8_USB, P8_detect, 'RPi'
+DEBUG:   [             952]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [             952]	<< 10:47:43:45:43:54:65:73:74:65:72
+DEBUG:   [            1312]	<< requesting power status of 'TV' (0)
+TRAFFIC: [            1312]	<< 10:8f
+TRAFFIC: [            1434]	>> 01:46
+DEBUG:   [            1434]	>> TV (0) -> Recorder 1 (1): give osd name (46)
+DEBUG:   [            1434]	<< Recorder 1 (1) -> TV (0): OSD name 'CECTester'
+TRAFFIC: [            1434]	<< 10:47:43:45:43:54:65:73:74:65:72
+TRAFFIC: [            1796]	>> 01:90:00
+DEBUG:   [            1796]	>> TV (0) -> Recorder 1 (1): report power status (90)
+DEBUG:   [            1796]	TV (0): power status changed from 'unknown' to 'on'
+DEBUG:   [            1796]	expected response received (90: report power status)
+TRAFFIC: [            1797]	<< 4f:82:20:00
+WARNING: [            1917]	unhandled response received: opcode=82 initiator=1 destination=f response=0
+TRAFFIC: [            2185]	>> 0f:80:10:00:20:00
+DEBUG:   [            2185]	>> TV (0) -> Broadcast (F): routing change (80)
+DEBUG:   [            4797]	command 'active source' timeout
+DEBUG:   [            5297]	unregistering all CEC clients
+NOTICE:  [            5297]	unregistering client: libCEC version = 3.0.1, client version = 3.0.1, firmware version = 1, logical address(es) = Recorder 1 (1) , physical address: 1.0.0.0,  compiled on Fri Jul  3 19:20:43 UTC 2015 by pbuilder@mgorven-pc.thefacebook.com on Linux 3.16.0-41-generic (armv7l), features: P8_USB, P8_detect, 'RPi'
+DEBUG:   [            5297]	Recorder 1 (1): power status changed from 'on' to 'unknown'
+DEBUG:   [            5297]	Recorder 1 (1): vendor = Unknown (000000)
+DEBUG:   [            5297]	Recorder 1 (1): CEC version unknown
+DEBUG:   [            5297]	Recorder 1 (1): osd name set to 'Recorder 1'
+DEBUG:   [            5297]	Recorder 1 (1): device status changed into 'unknown'
+DEBUG:   [            5297]	unregistering all CEC clients
+TRAFFIC: [            5298]	>> 0f:86:20:00
+TRAFFIC: [            5298]	>> 01:46
+TRAFFIC: [            5298]	>> 01:8d:00
+TRAFFIC: [            5298]	>> 01:46
+TRAFFIC: [            5298]	>> 4f:82:20:00
+DEBUG:   [            5298]	Playback 1 (4): physical address changed from ffff to 2000
+DEBUG:   [            5298]	Playback 1 (4): power status changed from 'unknown' to 'on'
+DEBUG:   [            5298]	making Playback 1 (4) the active source
+DEBUG:   [            5298]	device Playback 1 (4) status changed to present after command active source
+DEBUG:   [            5303]	>> TV (0) -> Broadcast (F): set stream path (86)
+DEBUG:   [            5303]	>> TV (0) -> Recorder 1 (1): give osd name (46)
+DEBUG:   [            5303]	>> TV (0) -> Recorder 1 (1): menu request (8D)
+DEBUG:   [            5303]	>> TV (0) -> Recorder 1 (1): give osd name (46)
+DEBUG:   [            5303]	>> Playback 1 (4) -> Broadcast (F): active source (82)
+DEBUG:   [            6055]	UnregisterLogicalAddress - releasing previous logical address
+DEBUG:   [            6055]	logical address changed to Broadcast (f)
+/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py:95: RuntimeWarning: A physical pull up resistor is fitted on this channel!
+  GPIO.setup(self._row_pins[i], GPIO.IN, pull_up_down=GPIO.PUD_UP)
+192.168.0.52 - - [16/Apr/2017 16:04:10] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:04:12] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:04:29] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:04:30] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:05:21] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:05:23] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:05:24] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:05:25] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:09:54] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:09:55] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:20] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:21] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:21] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:22] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:22] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:22] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:22] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:23] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:23] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:23] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:24] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:24] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:25] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:26] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:26] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:26] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:27] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:28] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:28] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:28] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:28] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:29] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:29] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:29] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:29] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:30] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:30] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:31] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:31] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:51] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:51] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:51] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:53] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:53] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:53] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:53] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:54] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:55] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:55] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:56] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:56] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:56] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:56] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:57] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:58] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:58] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:58] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:59] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:10:59] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:01] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:01] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:02] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:03] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:03] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:03] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:03] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:04] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:04] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:05] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:08] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:08] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:08] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:09] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:09] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:09] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:09] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:10] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:10] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:10] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:10] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:10] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:11] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:11] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:12] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:12] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:12] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:12] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:13] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:25] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:25] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:26] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:26] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:26] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:26] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:27] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:27] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:27] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:27] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:28] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:28] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:28] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:28] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:29] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:29] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:29] "GET /undefined HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:30] "GET /lights.cinema.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:11:31] "GET /lights.cinema.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:16] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:17] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:18] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:19] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:20] "GET /lights.brightness HTTP/1.1" 200 -
+[2017-04-16 16:12:21,127] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 98, in webRequest
+    run.broadcast(path)
+  File "run.py", line 56, in broadcast
+    signal(path).send(self)
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 73605 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.10 - - [16/Apr/2017 16:12:21] "GET /lights.brightness HTTP/1.1" 500 -
+192.168.0.10 - - [16/Apr/2017 16:12:21] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:22] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:23] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:24] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:24] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:25] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:29] "GET /lights.cinema.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:38] "GET /lights.cinema.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:45] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:46] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:53] "GET /code_47 HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:55] "GET /code_47 HTTP/1.1" 200 -
+192.168.0.10 - - [16/Apr/2017 16:12:56] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:14:42] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:14:42] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:14:43] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:14:44] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:14:44] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:14:45] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:14:46] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:14:49] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:28:07] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:29:57] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:29:58] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:37:02] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:37:03] "GET /undefined HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:21] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:21] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:21] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:21] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:22] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:22] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:22] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:23] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:23] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:23] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:23] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:24] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:24] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:24] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:24] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:25] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:28] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:29] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:50] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:51] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:51] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:51] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:54] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:58] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:38:59] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:39:08] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:39:08] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:39:09] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:39:11] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:39:21] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:39:23] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:40:46] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:40:46] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:40:46] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:40:58] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:40:58] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:41:01] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:41:01] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:41:05] "GET /lights.toggle HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:41:28] "GET /lights.toggle HTTP/1.1" 200 -
+/usr/lib/python3.4/importlib/_bootstrap.py:1161: ExtDeprecationWarning: Importing flask.ext.jsonpify is deprecated, use flask_jsonpify instead.
+  spec.loader.load_module(spec.name)
+ * Running on http://0.0.0.0:9000/ (Press CTRL+C to quit)
+192.168.0.52 - - [16/Apr/2017 16:46:36] "GET / HTTP/1.1" 200 -
+/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py:95: RuntimeWarning: A physical pull up resistor is fitted on this channel!
+  GPIO.setup(self._row_pins[i], GPIO.IN, pull_up_down=GPIO.PUD_UP)
+192.168.0.52 - - [16/Apr/2017 16:46:42] "GET / HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:49:27] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:49:35] "GET /lights.brightness HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:51:13] "GET / HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:51:13] "GET /favicon.ico HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:51:24] "GET /lights.brightness?callback=jQuery190011163960080140822_1492361482615&_=1492361482616 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:51:31] "GET /lights.toggle?callback=jQuery190011163960080140822_1492361482615&_=1492361482617 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 16:51:32] "GET /lights.toggle?callback=jQuery190011163960080140822_1492361482615&_=1492361482618 HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:52:54] "GET /lights.toggle?callback=jQuery190027989941399080065_1492361572173&_=1492361572174 HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:52:55] "GET /lights.toggle?callback=jQuery190027989941399080065_1492361572173&_=1492361572175 HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:53:07] "GET /lights.toggle?callback=jQuery19008020374808955324_1492361585668&_=1492361585669 HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 16:53:08] "GET /lights.toggle?callback=jQuery19008020374808955324_1492361585668&_=1492361585670 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:11] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012020 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:11] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012021 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:12] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012022 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:12] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012023 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:12] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012024 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:12] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012025 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:12] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012026 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:13] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012027 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:13] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012028 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:13] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012029 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:13] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012030 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:13] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012031 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:14] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012032 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:14] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012033 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:14] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012034 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:14] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012035 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:15] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012036 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:15] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012037 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:15] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012038 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:15] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012039 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:16] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012040 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:16] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012041 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:16] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012042 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:17] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012043 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:17] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012044 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:18] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012045 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:19] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012046 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:19] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012047 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:19] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012048 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:00:19] "GET /undefined?callback=jQuery19006279883155801469_1492362012019&_=1492362012049 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:09] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070092 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:09] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070093 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:09] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070094 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:10] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070095 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:10] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070096 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:11] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070097 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:11] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070098 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:11] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070099 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:12] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070100 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:12] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070101 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:13] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070102 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:13] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070103 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:13] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070104 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:13] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070105 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:14] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070106 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:14] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070107 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:15] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070108 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:16] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070109 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:16] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070110 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:17] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070111 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:17] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070112 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:18] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070113 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:18] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070114 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:19] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070115 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:19] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070116 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:20] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070117 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:20] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070118 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:20] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070119 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:21] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070120 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:22] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070121 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:22] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070122 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:22] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070123 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:23] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070124 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:24] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070125 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:25] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070126 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:26] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070127 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:27] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070128 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:28] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070129 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:28] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070130 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:29] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070131 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:29] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070132 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:30] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070133 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:30] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070134 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:30] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070135 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:31] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070136 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:32] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070137 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:32] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070138 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:33] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070139 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:33] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070140 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:33] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070141 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:34] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070142 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:34] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070143 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:34] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070144 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:35] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070145 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:35] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070146 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:35] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070147 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:35] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070148 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:36] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070149 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:36] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070150 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:36] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070151 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:36] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070152 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:36] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070153 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:36] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070154 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:37] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070155 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:37] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070156 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:37] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070157 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:37] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070158 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:37] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070159 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:38] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070160 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:38] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070161 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:39] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070162 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:39] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070163 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:39] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070164 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:39] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070165 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:41] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070166 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:41] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070167 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:41] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070168 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:42] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070169 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:42] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070170 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:43] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070171 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:44] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070172 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:45] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070173 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:45] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070174 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:46] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070175 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:46] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070176 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:47] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070177 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:47] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070178 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:48] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070179 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:48] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070180 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:49] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070181 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:49] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070182 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:50] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070183 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:50] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070184 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:50] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070185 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:51] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070186 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:51] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070187 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:52] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070188 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:52] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070189 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:53] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070190 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:53] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070191 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:54] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070192 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:54] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070193 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:54] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070194 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:55] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070195 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:55] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070196 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:56] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070197 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:56] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070198 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:56] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070199 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:56] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070200 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:57] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070201 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:57] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070202 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:59] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070203 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:01:59] "GET /undefined?callback=jQuery1900119181305416866_1492362070091&_=1492362070204 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:12:56] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774677 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:12:57] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774678 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:12:57] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774679 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:12:57] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774680 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:12:57] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774681 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:12:57] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774682 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:12:58] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774683 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:12:59] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774684 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:12:59] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774685 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:00] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774686 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:00] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774687 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:01] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774688 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:01] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774689 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:01] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774690 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:01] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774691 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:02] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774692 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:02] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774693 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:02] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774694 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:03] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774695 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:03] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774696 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:03] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774697 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:04] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774698 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:04] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774699 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:04] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774700 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:05] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774701 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:05] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774702 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:06] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774703 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:06] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774704 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:06] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774705 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:06] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774706 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:07] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774707 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:07] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774708 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:08] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774709 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:08] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774710 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:09] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774711 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:10] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774712 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:11] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774713 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:11] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774714 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:12] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774715 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:12] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774716 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:12] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774717 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:13] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774718 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:14] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774719 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:13:14] "GET /undefined?callback=jQuery19005604931269561575_1492362774676&_=1492362774720 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:13] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033205 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:13] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033206 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:13] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033207 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:14] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033208 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:18] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033209 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:18] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033210 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:18] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033211 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:18] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033212 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:18] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033213 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:19] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033214 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:19] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033215 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:21] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033216 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:21] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033217 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:21] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033218 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:22] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033219 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:23] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033220 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:23] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033221 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:23] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033222 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:24] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033223 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:24] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033224 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:24] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033225 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:24] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033226 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:25] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033227 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:25] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033228 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:27] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033229 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:27] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033230 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:27] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033231 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:28] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033232 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:30] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033233 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 17:17:30] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033234 HTTP/1.1" 200 -
+192.168.0.248 - - [16/Apr/2017 17:30:49] "GET /undefined?callback=jQuery190016245863649085868_1492363846240&_=1492363846241 HTTP/1.1" 200 -
