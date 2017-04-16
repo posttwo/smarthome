@@ -801,3 +801,2245 @@ bitstring.CreationError: 73605 is too large an unsigned integer for a bitstring 
 192.168.0.52 - - [16/Apr/2017 17:17:30] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033233 HTTP/1.1" 200 -
 192.168.0.52 - - [16/Apr/2017 17:17:30] "GET /undefined?callback=jQuery190018638640221181313_1492363033204&_=1492363033234 HTTP/1.1" 200 -
 192.168.0.248 - - [16/Apr/2017 17:30:49] "GET /undefined?callback=jQuery190016245863649085868_1492363846240&_=1492363846241 HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 73394 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+Traceback (most recent call last):
+  File "run.py", line 62, in key_pressed
+    def key_pressed(self, key):
+ValueError: invalid literal for int() with base 10: 'B'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/pad4pi/rpi_gpio.py", line 89, in _onKeyPress
+    handler(keyPressed)
+  File "run.py", line 66, in key_pressed
+    if int_key >= 0 and int_key <= 9:
+  File "run.py", line 82, in non_digit_entered
+    if key == 'A':
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+[2017-04-16 19:50:53,425] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:50:53] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252149&_=1492372252150 HTTP/1.1" 500 -
+[2017-04-16 19:50:53,600] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:50:53] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252151&_=1492372252152 HTTP/1.1" 500 -
+[2017-04-16 19:50:53,702] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:50:53] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252153&_=1492372252154 HTTP/1.1" 500 -
+[2017-04-16 19:50:53,808] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:50:53] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252155&_=1492372252156 HTTP/1.1" 500 -
+[2017-04-16 19:50:54,007] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:50:54] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252157&_=1492372252158 HTTP/1.1" 500 -
+[2017-04-16 19:50:54,214] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:50:54] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252159&_=1492372252160 HTTP/1.1" 500 -
+192.168.0.52 - - [16/Apr/2017 19:50:59] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252162 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:50:59] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252163 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:00] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252164 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:01] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252165 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:01] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252166 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:01] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252167&_=1492372252168 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:01] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252169 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:01] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252170 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:02] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252171 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:03] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252172 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:04] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252173 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:04] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252167&_=1492372252174 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:04] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252161&_=1492372252175 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:04] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252176&_=1492372252177 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:05] "GET /lights.toggle?callback=jQuery19006928592395464381_1492372252176&_=1492372252178 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:08] "GET /lights.cinema.toggle?callback=jQuery19006928592395464381_1492372252176&_=1492372252179 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:09] "GET /lights.cinema.toggle?callback=jQuery19006928592395464381_1492372252176&_=1492372252180 HTTP/1.1" 200 -
+[2017-04-16 19:51:10,704] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:10] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252176&_=1492372252181 HTTP/1.1" 500 -
+[2017-04-16 19:51:10,911] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:10] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252161&_=1492372252182 HTTP/1.1" 500 -
+[2017-04-16 19:51:11,007] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:11] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252167&_=1492372252183 HTTP/1.1" 500 -
+[2017-04-16 19:51:11,213] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:11] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252184&_=1492372252185 HTTP/1.1" 500 -
+[2017-04-16 19:51:11,315] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:11] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252186&_=1492372252187 HTTP/1.1" 500 -
+[2017-04-16 19:51:11,418] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:11] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252188&_=1492372252189 HTTP/1.1" 500 -
+[2017-04-16 19:51:11,523] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 78406 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:11] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252190&_=1492372252191 HTTP/1.1" 500 -
+192.168.0.52 - - [16/Apr/2017 19:51:17] "GET /code_47?callback=jQuery19006928592395464381_1492372252192&_=1492372252193 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:19] "GET /code_47?callback=jQuery19006928592395464381_1492372252192&_=1492372252194 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:19] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252192&_=1492372252195 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:21] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252192&_=1492372252196 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:22] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252192&_=1492372252197 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:23] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252192&_=1492372252198 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:23] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252192&_=1492372252199 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:24] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252192&_=1492372252200 HTTP/1.1" 200 -
+[2017-04-16 19:51:24,627] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 71887 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:24] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252192&_=1492372252201 HTTP/1.1" 500 -
+[2017-04-16 19:51:25,241] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 76500 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:25] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252202&_=1492372252203 HTTP/1.1" 500 -
+[2017-04-16 19:51:25,860] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 76500 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:25] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252204&_=1492372252205 HTTP/1.1" 500 -
+[2017-04-16 19:51:26,264] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 76500 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:26] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252206&_=1492372252207 HTTP/1.1" 500 -
+[2017-04-16 19:51:26,674] ERROR in app: Exception on /lights.brightness [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1219, in _init_with_token
+    b = cls(**{_tokenname_to_initialiser[name]: value})
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 817, in _initialise
+    init_without_length_or_offset[k](self, v)
+KeyError: 'uint'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "run.py", line 99, in webRequest
+    @app.route('/', defaults={'path': ''})
+  File "run.py", line 57, in broadcast
+    self.keypad.cleanup()
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in send
+    for receiver in self.receivers_for(sender)]
+  File "/usr/local/lib/python3.4/dist-packages/blinker/base.py", line 267, in <listcomp>
+    for receiver in self.receivers_for(sender)]
+  File "/home/pi/smarthome/controllers/Lights.py", line 70, in toggle_brightness
+    self.light.set_color(color, 500, True)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/light.py", line 76, in set_color
+    self.fire_and_forget(LightSetColor, {"color": color, "duration": duration}, num_repeats=5)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/device.py", line 430, in fire_and_forget
+    msg = msg_type(self.mac_addr, self.source_id, seq_num=0, payload=payload, ack_requested=False, response_requested=False)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 336, in __init__
+    super(LightSetColor, self).__init__(MSG_IDS[LightSetColor], target_addr, source_id, seq_num, ack_requested, response_requested)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 43, in __init__
+    self.packed_message = self.generate_packed_message()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/message.py", line 46, in generate_packed_message
+    self.payload = self.get_payload()
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in get_payload
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/lifxlan/msgtypes.py", line 340, in <genexpr>
+    color = b"".join(little_endian(bitstring.pack("16", field)) for field in self.color)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4224, in pack
+    s._append(BitStream._init_with_token(name, length, value))
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1224, in _init_with_token
+    b = cls(**{name: int(value), 'length': token_length})
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 4133, in __new__
+    x._initialise(auto, length, offset, **kwargs)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 822, in _initialise
+    init_with_length_only[k](self, v, length)
+  File "/usr/local/lib/python3.4/dist-packages/bitstring.py", line 1367, in _setuint
+    raise CreationError(msg, uint, length, (1 << length) - 1)
+bitstring.CreationError: 76500 is too large an unsigned integer for a bitstring of length 16. The allowed range is [0, 65535].
+192.168.0.52 - - [16/Apr/2017 19:51:26] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252208&_=1492372252209 HTTP/1.1" 500 -
+192.168.0.52 - - [16/Apr/2017 19:51:28] "GET /code_47?callback=jQuery19006928592395464381_1492372252210&_=1492372252211 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:28] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252212&_=1492372252213 HTTP/1.1" 200 -
+192.168.0.52 - - [16/Apr/2017 19:51:29] "GET /lights.brightness?callback=jQuery19006928592395464381_1492372252210&_=1492372252214 HTTP/1.1" 200 -

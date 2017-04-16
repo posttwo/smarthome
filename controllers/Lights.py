@@ -18,6 +18,7 @@ class Lights(threading.Thread):
         print("Light " + self.name + " added")
 
         #Register events
+        signal('SYSTEM_error').connect(self.error)
         signal('SYSTEM_stopping').connect(self.clean_up)
         signal('lights.on').connect(self.turn_on)
         signal('lights.off').connect(self.turn_off)
@@ -65,10 +66,12 @@ class Lights(threading.Thread):
         self.shout("changing brightness")
         color = list(self.get_state())
         bright = color[2]
-        if bright < 65535:
+        print(bright)
+        if bright < 56267:
             color[2] = color[2] + 13107
             self.light.set_color(color, 500, True)
         else:
+            print("Resetting")
             color[2] = 13107
             self.light.set_color(color, 500, True)
 
@@ -77,6 +80,12 @@ class Lights(threading.Thread):
             self.unset_red_alert()
         else:
             self.set_red_alert()
+
+    def error(self, sender='anonymous'):
+        if self.get_power() is True:
+            color = self.get_state()
+            self.light.set_color([0, 35535, 65535, 2500], 0, True)
+            self.light.set_color(color, 1500, True)
 
     def set_red_alert(self, sender='anonymous'):
         self.shout("setting red alert status")

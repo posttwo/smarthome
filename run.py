@@ -11,6 +11,7 @@ from flask.ext.jsonpify import jsonify
 class Run:
     def __init__(self):
         self.input_buffer = ""
+        self.lock_code = None
 
     def main(self):
         try:
@@ -43,6 +44,8 @@ class Run:
             self.keypad = factory.create_keypad(keypad=KEYPAD, row_pins=ROW_PINS, col_pins=COL_PINS)
             self.keypad.registerKeyPressHandler(self.key_pressed)
 
+            signal('code_0').connect(self.lock_console)
+
             print(Back.GREEN + 'SmartTwo Controller Started' + Style.RESET_ALL)
             while True:
                 time.sleep(1)
@@ -54,7 +57,12 @@ class Run:
             self.keypad.cleanup()
 
     def broadcast(self, path):
-        signal(path).send(self)
+        if self.lock_code is None:
+            signal(path).send(self)
+
+    def lock_console(self, sender):
+        print("Locking Console")
+        self.lock_code = "";
 
     def key_pressed(self, key):
         print("Pressed {} key".format(key))
@@ -71,20 +79,31 @@ class Run:
     def non_digit_entered(self, key):
         if key == '#':
             print("Code: " + self.input_buffer)
-            signal('code_' + self.input_buffer).send(self)
+            if self.lock_code is not None:
+                if self.lock_code == "":
+                    self.lock_code += self.input_buffer
+                elif self.lock_code == self.input_buffer:
+                    self.lock_code = None
+                else:
+                    print("Console Locked")
+                    signal('SYSTEM_error').send(self)
+            else:
+                signal('code_' + self.input_buffer).send(self)
             self.input_buffer = ""
         if key == '*':
             print('Clearing Input Buffer')
             self.input_buffer = ""
-        if key == 'A':
-            signal('lights.toggle').send(self)
-        if key == 'B':
-            signal('lights.brightness').send(self)
-        if key == 'C':
-            signal('lights.cinema.toggle').send(self)
-        if key == 'D':
-            signal('alert.red.toggle').send(self)
 
+        #Security
+        if self.lock_code is None:
+            if key == 'A':
+                signal('lights.toggle').send(self)
+            if key == 'B':
+                signal('lights.brightness').send(self)
+            if key == 'C':
+                signal('lights.cinema.toggle').send(self)
+            if key == 'D':
+                signal('alert.red.toggle').send(self)
 
 app = Flask(__name__)
 run = Run()
