@@ -3,7 +3,7 @@ Jinja2==2.9.5
 MarkupSafe==1.0
 PyAudio==0.2.8
 RPi.GPIO==0.6.3
-Werkzeug==0.12.1
+Werkzeug==0.15.3
 bitstring==3.1.5
 blinker==1.4
 chardet==2.3.0
