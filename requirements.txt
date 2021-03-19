@@ -1,5 +1,5 @@
 Flask==0.12.1
-Jinja2==2.9.5
+Jinja2==2.11.3
 MarkupSafe==1.0
 PyAudio==0.2.8
 RPi.GPIO==0.6.3
